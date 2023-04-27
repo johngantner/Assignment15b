@@ -3,6 +3,7 @@
 // 4/27/2023
 // C++ Software Development
 
+#include <iostream>
 using namespace std;
 
 template <typename T>// Creating the primary template
@@ -23,4 +24,14 @@ double half<double>(double x) {
 template <>
 int half<int>(int x) {
 	return x / 2 + (x % 2 == 1 ? 1 : 0);
+}
+
+int main() {
+	double a = 7.0;
+	float b = 5.0f;
+	int c = 3;
+
+	cout << half(a) << endl;
+	cout << half(b) << endl;
+	cout << half(c) << endl;
 }
