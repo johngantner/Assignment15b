@@ -12,17 +12,17 @@ T half(T x) {
 }
 
 template <>
-float half<float>(float x) {
+float half<float>(float x) { // Float template
 	return x / 2.0f;
 }
 
 template <>
-double half<double>(double x) {
+double half<double>(double x) { // Double template
 	return x / 2.0f;
 }
 
 template <>
-int half<int>(int x) {
+int half<int>(int x) { // Int template
 	return x / 2 + (x % 2 == 1 ? 1 : 0);
 }
 
@@ -31,7 +31,10 @@ int main() {
 	float b = 5.0f;
 	int c = 3;
 
+	// Testing templated half function
 	cout << half(a) << endl;
 	cout << half(b) << endl;
 	cout << half(c) << endl;
+
+	return 0;
 }
