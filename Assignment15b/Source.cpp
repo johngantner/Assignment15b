@@ -22,5 +22,5 @@ double half<double>(double x) {
 
 template <>
 int half<int>(int x) {
-	return x / 2.0f;
+	return x / 2 + (x % 2 == 1 ? 1 : 0);
 }
